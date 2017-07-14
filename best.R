@@ -19,7 +19,7 @@ best <- function(state, outcome) {
                                          outcomes_selected$'state name' == state)
                 
                 ## Return hospital name in that state with lowest 30-day death
-                order_data <- state_selected[order(state_selected[3],
+                order_data <- state_selected[order(state_selected[3],state_selected[1],
                                                    na.last = NA, decreasing = FALSE),]
                 order_data[1,1]
         }
